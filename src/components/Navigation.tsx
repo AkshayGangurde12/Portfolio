@@ -19,38 +19,38 @@ const Navigation = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/80 backdrop-blur-lg border-b border-border" : ""
+        scrolled ? "bg-background/90 backdrop-blur-xl border-b border-border shadow-lg" : ""
       }`}
     >
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 md:px-6 py-4 md:py-5">
         <div className="flex items-center justify-between">
           <Logo onClick={() => scrollToSection("hero")} />
 
-          <div className="hidden md:flex gap-8">
+          <div className="hidden md:flex gap-8 lg:gap-10">
             <button
               onClick={() => scrollToSection("about")}
-              className="text-base font-medium hover:text-primary transition-colors relative group"
+              className="text-base lg:text-lg font-medium hover:text-primary transition-colors relative group"
             >
               About
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
             </button>
             <button
               onClick={() => scrollToSection("skills")}
-              className="text-base font-medium hover:text-primary transition-colors relative group"
+              className="text-base lg:text-lg font-medium hover:text-primary transition-colors relative group"
             >
               Skills
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
             </button>
             <button
               onClick={() => scrollToSection("projects")}
-              className="text-base font-medium hover:text-primary transition-colors relative group"
+              className="text-base lg:text-lg font-medium hover:text-primary transition-colors relative group"
             >
               Projects
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="text-base font-medium hover:text-primary transition-colors relative group"
+              className="text-base lg:text-lg font-medium hover:text-primary transition-colors relative group"
             >
               Contact
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
@@ -58,7 +58,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden text-2xl hover:text-primary transition-colors">
+          <button className="md:hidden text-3xl hover:text-primary transition-colors p-2">
             ☰
           </button>
         </div>

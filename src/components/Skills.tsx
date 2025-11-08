@@ -2,18 +2,10 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { 
-  Code2, 
   Database, 
   Globe, 
   Server, 
-  Palette, 
-  Terminal,
-  FileCode,
-  Layers,
-  Cpu,
-  GitBranch,
-  Monitor,
-  Figma as FigmaIcon
+  Terminal
 } from "lucide-react";
 
 const Skills = () => {
@@ -77,11 +69,7 @@ const Skills = () => {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
+      y: 0
     }
   };
 
@@ -97,17 +85,19 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-24 border-t border-border">
-      <div className="container mx-auto px-4">
+    <section id="skills" className="py-20 md:py-32 border-t border-border">
+      <div className="container mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-20"
         >
-          <h2 className="text-4xl font-bold mb-4">My Skills</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            My <span className="text-primary">Skills</span>
+          </h2>
+          <p className="text-base md:text-lg lg:text-xl text-muted-foreground/90 max-w-3xl mx-auto leading-relaxed">
             A comprehensive overview of my technical expertise across different domains of software development
           </p>
         </motion.div>
@@ -120,16 +110,20 @@ const Skills = () => {
           className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6"
         >
           {skillCategories.map((category, categoryIndex) => (
-            <motion.div key={category.title} variants={categoryVariants}>
-              <Card className="p-6 glass hover:glass-hover transition-all duration-500 h-full group">
-                <div className="flex items-center mb-6">
-                  <div className={`p-3 rounded-lg bg-gradient-to-r ${category.color} mr-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <category.icon className="w-6 h-6 text-white" />
+            <motion.div 
+              key={category.title} 
+              variants={categoryVariants}
+              transition={{ duration: 0.6 }}
+            >
+              <Card className="p-6 md:p-8 bg-card/50 backdrop-blur-sm border border-border/50 hover:border-primary/30 hover:bg-card/70 transition-all duration-500 h-full group rounded-2xl shadow-lg hover:shadow-xl">
+                <div className="flex items-center gap-4 mb-6 md:mb-8">
+                  <div className={`p-3 md:p-4 rounded-xl bg-gradient-to-br ${category.color} group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                    <category.icon className="w-6 h-6 md:w-7 md:h-7 text-white" />
                   </div>
-                  <h3 className="text-lg font-semibold">{category.title}</h3>
+                  <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-foreground">{category.title}</h3>
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-4 md:space-y-5">
                   {category.skills.map((skill, skillIndex) => (
                     <motion.div
                       key={skill.name}
@@ -138,17 +132,17 @@ const Skills = () => {
                     >
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-3">
-                          <span className="text-xl group-hover/skill:scale-125 transition-transform duration-200">
+                          <span className="text-xl md:text-2xl group-hover/skill:scale-110 transition-transform duration-200">
                             {skill.icon}
                           </span>
-                          <span className="font-medium text-sm">{skill.name}</span>
+                          <span className="font-medium text-sm md:text-base text-foreground">{skill.name}</span>
                         </div>
-                        <span className="text-xs text-muted-foreground font-mono">
+                        <span className="text-xs md:text-sm text-muted-foreground/80 font-mono font-semibold">
                           {skill.proficiency}%
                         </span>
                       </div>
                       
-                      <div className="w-full bg-secondary/50 rounded-full h-2 overflow-hidden">
+                      <div className="w-full bg-background/50 rounded-full h-2 md:h-2.5 overflow-hidden border border-border/30">
                         <motion.div
                           className={`h-full bg-gradient-to-r ${category.color} rounded-full`}
                           initial={{ width: 0 }}
@@ -165,28 +159,6 @@ const Skills = () => {
                   ))}
                 </div>
 
-                {/* Floating particles effect */}
-                <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-lg">
-                  {[...Array(3)].map((_, i) => (
-                    <motion.div
-                      key={i}
-                      className={`absolute w-1 h-1 bg-gradient-to-r ${category.color} rounded-full opacity-0 group-hover:opacity-60`}
-                      style={{
-                        left: `${20 + i * 30}%`,
-                        top: `${30 + i * 20}%`,
-                      }}
-                      animate={{
-                        y: [-10, -20, -10],
-                        opacity: [0, 0.6, 0],
-                      }}
-                      transition={{
-                        duration: 2,
-                        repeat: Infinity,
-                        delay: i * 0.5,
-                      }}
-                    />
-                  ))}
-                </div>
               </Card>
             </motion.div>
           ))}
@@ -198,10 +170,12 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mt-16"
+          className="mt-16 md:mt-20"
         >
-          <h3 className="text-2xl font-bold text-center mb-8">Additional Technologies</h3>
-          <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-3">
+          <h3 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">
+            Additional <span className="text-primary">Technologies</span>
+          </h3>
+          <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-3 md:gap-4">
             {[
               "TypeScript", "Tailwind CSS", "Bootstrap", "REST APIs", 
               "GraphQL", "Docker", "AWS", "Firebase", "Vercel", "Netlify"
@@ -213,14 +187,13 @@ const Skills = () => {
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 viewport={{ once: true }}
                 whileHover={{ 
-                  scale: 1.1,
-                  rotate: [0, -5, 5, 0],
-                  transition: { duration: 0.3 }
+                  scale: 1.05,
+                  transition: { duration: 0.2 }
                 }}
               >
                 <Badge
                   variant="outline"
-                  className="px-4 py-2 text-sm hover:bg-primary/10 hover:border-primary/50 transition-all cursor-default glass"
+                  className="px-4 md:px-5 py-2 md:py-2.5 text-sm md:text-base font-medium hover:bg-primary/10 hover:border-primary/50 hover:text-primary transition-all cursor-default bg-card/50 backdrop-blur-sm border-border/50"
                 >
                   {tech}
                 </Badge>

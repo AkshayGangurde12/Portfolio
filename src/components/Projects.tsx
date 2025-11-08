@@ -91,15 +91,17 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-24 border-t border-border">
-      <div className="container mx-auto px-4">
+    <section id="projects" className="py-20 md:py-32 border-t border-border">
+      <div className="container mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-bold mb-16 text-center">Featured Projects</h2>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-12 md:mb-20 text-center">
+            Featured <span className="text-primary">Projects</span>
+          </h2>
         </motion.div>
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
