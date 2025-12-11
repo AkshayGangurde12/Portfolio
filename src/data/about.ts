@@ -80,7 +80,7 @@ export const aboutContent: AboutContent = {
   stats: [
     {
       icon: GraduationCap,
-      value: "7.06 CGPA",
+      value: "7.38 CGPA",
       label: "Current semester academic excellence",
     },
     {

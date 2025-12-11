@@ -50,7 +50,7 @@ export const education: ExperienceEntry[] = [
     endDate: '2025',
     description: 'Specialization in Full-Stack Development and Real-Time Systems',
     achievements: [
-      'Current CGPA: 7.06',
+      'Current CGPA: 7.38',
       'Relevant Coursework: Data Structures, Algorithms, Web Development, Database Management',
       'Active participant in technical events and hackathons'
     ]
