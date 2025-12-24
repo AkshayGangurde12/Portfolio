@@ -2,11 +2,11 @@
 
 A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS.
 
-## About
+## About ##
 
 This is the personal portfolio website of Akshay Gangurde, a final year Computer Engineering student specializing in MERN stack development.
 
-## Features
+## Features ##
 
 - 🎨 Modern, responsive design
 - ⚡ Built with Vite for fast development
