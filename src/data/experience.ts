@@ -46,12 +46,12 @@ export const education: ExperienceEntry[] = [
     title: 'B.Tech in Computer Engineering',
     organization: 'Vishwakarma Institute of Information Technology',
     location: 'Pune, Maharashtra',
-    startDate: '2021',
-    endDate: '2025',
+    startDate: '2022',
+    endDate: '2026',
     description: 'Specialization in Full-Stack Development and Real-Time Systems',
     achievements: [
       'Current CGPA: 7.38',
-      'Relevant Coursework: Data Structures, Algorithms, Web Development, Database Management',
+      'Relevant Coursework: Data Structures, Algorithms, Web Development, Database Management,Docker'
       'Active participant in technical events and hackathons'
     ]
   }
