@@ -31,7 +31,7 @@ export interface AboutContent {
 }
 
 export const aboutContent: AboutContent = {
-  bio: "I'm Akshay Gangurde, a final year Computer Engineering student at Vishwakarma Institute of Information Technology, Pune. With a deep passion for technology, I specialize in Full-Stack Development using the MERN stack and am constantly exploring innovative solutions in real-time systems. I thrive on solving real-world problems through innovation and efficiency. Whether it's building impactful projects or participating in hackathons, I'm committed to pushing boundaries and contributing to solutions that make a difference.",
+  bio: "I'm Akshay Gangurde, I have completed BTech in Computer Engineering student at Vishwakarma Institute of Information Technology, Pune. With a deep passion for technology, I specialize in Full-Stack Development using the MERN stack and am constantly exploring innovative solutions in real-time systems. I thrive on solving real-world problems through innovation and efficiency. Whether it's building impactful projects or participating in hackathons, I'm committed to pushing boundaries and contributing to solutions that make a difference.",
   
   whyIBuild: "I build software because I believe technology should simplify lives, not complicate them. Every line of code I write is aimed at solving real problems and creating meaningful impact. I'm driven by the challenge of transforming complex requirements into elegant, user-friendly solutions that people actually enjoy using. Whether it's helping farmers get fair prices or making healthcare more accessible, I see software development as a powerful tool for positive change.",
   
