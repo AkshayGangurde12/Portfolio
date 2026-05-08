@@ -17,7 +17,7 @@ const About = () => {
   const stats = [
     {
       icon: GraduationCap,
-      value: "7.38 CGPA",
+      value: "7.54 CGPA",
       label: "Current semester academic excellence",
     },
     {
@@ -68,7 +68,7 @@ const About = () => {
             <Card className="p-8 md:p-10 glass hover:glass-hover transition-all duration-500 rounded-2xl">
               <h3 className="text-2xl md:text-3xl font-bold mb-6 text-primary">Who Am I?</h3>
               <p className="text-base md:text-lg text-muted-foreground/90 leading-relaxed">
-                I'm Akshay Gangurde, a final year Computer Engineering student at Vishwakarma Institute 
+                I'm Akshay Gangurde, I have completed BTech in Computer Engineering student at Vishwakarma Institute 
                 of Information Technology, Pune. With a deep passion for technology, I specialize in 
                 Full-Stack Development using the MERN stack and am constantly exploring innovative solutions 
                 in real-time systems. I thrive on solving real-world problems through 
